@@ -3,7 +3,7 @@ import subprocess
 
 data = subprocess.check_output(['ntesh', 'wlan', 'show', 'profiles']).decode('utf-8').split('\n')
 
-pfofiles = [i.split(":")[1][1:-1] for i in data if "All User Profile" in i]
+profiles = [i.split(":")[1][1:-1] for i in data if "All User Profile" in i]
 
 
 for i in profiles:
