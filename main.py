@@ -1,3 +1,5 @@
+#Python program to find Wi-fi password
+
 import subprocess
 
 data = subprocess.check_output(['netsh','wlan', 'show','profiles']).decode('utf-8').split('\n')
